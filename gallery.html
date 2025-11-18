@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Memory Gallery - My Michigan Journey</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/jpeg" href="images/umlogo.jpeg" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@300;400;500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="nav-brand">Michigan '24</div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="gallery.html" class="active">Gallery</a>
+            <a href="about.html">About</a>
+            <a href="timeline.html">Timeline</a>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>Memory Gallery</h1>
+        <p>Here are some of my favorite memories from my semester abroad. Click on a photo to view it in a lightbox.</p>
+    </section>
+
+    <!-- Filter + Search Bar -->
+    <section class="gallery-controls">
+        <div class="filter-group">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="campus">Campus Life</button>
+            <button class="filter-btn" data-filter="travel">Travel</button>
+            <button class="filter-btn" data-filter="food">Food</button>
+            <button class="filter-btn" data-filter="friends">Friends</button>
+            <button class="filter-btn" data-filter="events">Events</button>
+        </div>
+
+        <div class="search-group">
+            <span class="search-icon">&#128269;</span>
+            <input type="text" id="searchInput" placeholder="Search memories..." />
+        </div>
+    </section>
+
+    <!-- Photo Grid -->
+    <main class="gallery-grid" id="galleryGrid">
+        <div class="gallery-item" data-category="campus" data-title="Michigan campus university life autumn">
+            <img src="images/campus.jpeg" alt="Michigan Campus" />
+            <div class="gallery-overlay">
+                <span class="gallery-meta">Campus · Oct 2024</span>
+                <span class="gallery-title">Campus Life</span>
+            </div>
+        </div>
+
+        <div class="gallery-item" data-category="travel" data-title="Chicago skyline city travel weekend">
+            <img src="images/chicago.jpeg" alt="Chicago skyline" />
+            <div class="gallery-overlay">
+                <span class="gallery-meta">Travel · Chicago</span>
+                <span class="gallery-title">Windy City Weekend</span>
+            </div>
+        </div>
+
+        <div class="gallery-item" data-category="travel" data-title="Detroit city motor city travel">
+            <img src="images/detroit.jpeg" alt="Detroit cityscape" />
+            <div class="gallery-overlay">
+                <span class="gallery-meta">Travel · Detroit</span>
+                <span class="gallery-title">Motor City</span>
+            </div>
+        </div>
+
+        <div class="gallery-item" data-category="friends" data-title="Friends social events campus memories">
+            <img src="images/frat.jpeg" alt="Friends and social events" />
+            <div class="gallery-overlay">
+                <span class="gallery-meta">Friends · Nov 2024</span>
+                <span class="gallery-title">First Party</span>
+            </div>
+        </div>
+
+        <div class="gallery-item" data-category="travel" data-title="San Francisco west coast travel">
+            <img src="images/sf.jpeg" alt="San Francisco" />
+            <div class="gallery-overlay">
+                <span class="gallery-meta">Travel · San Francisco</span>
+                <span class="gallery-title">SF Tech Week</span>
+            </div>
+        </div>
+
+        <div class="gallery-item" data-category="events" data-title="Y Combinator tech innovation startup">
+            <img src="images/ycombinator.jpeg" alt="Y Combinator" />
+            <div class="gallery-overlay">
+                <span class="gallery-meta">Events · Tech</span>
+                <span class="gallery-title">Y Combinator</span>
+            </div>
+        </div>
+    </main>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" id="lightboxClose">&times;</button>
+            <button class="lightbox-nav lightbox-prev" id="lightboxPrev">&#10094;</button>
+            <img src="" alt="" id="lightboxImage" />
+            <button class="lightbox-nav lightbox-next" id="lightboxNext">&#10095;</button>
+            <div class="lightbox-caption">
+                <div id="lightboxTitle"></div>
+                <div id="lightboxMeta"></div>
+            </div>
+        </div>
+        <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+    </div>
+
+    <footer class="footer">
+        <p>SI338 Individual Project - @ 2025 Alberto Puliga</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

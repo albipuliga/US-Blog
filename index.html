@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>My Michigan Journey</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/jpeg" href="images/umlogo.jpeg" />
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@300;400;500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="nav-brand">Michigan '24</div>
+        <nav class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="about.html">About</a>
+            <a href="timeline.html">Timeline</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <img src="images/campus_full.jpeg" alt="Michigan Campus" class="hero-bg" />
+        <div class="hero-content">
+            <h1>My Michigan Journey</h1>
+            <p>A semester of adventure and unforgettable memories.</p>
+            <a href="gallery.html" class="btn btn-primary">Explore My Journey</a>
+        </div>
+        <div class="scroll-indicator">
+            <span>&darr;</span>
+        </div>
+    </section>
+
+    <!-- Quick Stats -->
+    <section class="stats-section" id="stats">
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-icon">📅</div>
+                <div class="stat-number" data-target="5">0</div>
+                <div class="stat-label">Months</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">📍</div>
+                <div class="stat-number" data-target="4">0</div>
+                <div class="stat-label">Cities</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">📷</div>
+                <div class="stat-number" data-target="200">0</div>
+                <div class="stat-label">Photos</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">✨</div>
+                <div class="stat-number stat-infinite">1000+</div>
+                <div class="stat-label">Memories</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Memories -->
+    <section class="featured-section">
+        <div class="section-heading">
+            <h2>Featured Memories</h2>
+            <p>Highlights from my semester abroad.</p>
+        </div>
+
+        <div class="featured-grid">
+            <article class="memory-card">
+                <img src="images/campus.jpeg" alt="Michigan Campus" />
+                <div class="memory-overlay">
+                    <h3>Campus Life</h3>
+                    <p>Exploring the beautiful Michigan campus.</p>
+                </div>
+            </article>
+
+            <article class="memory-card">
+                <img src="images/chicago.jpeg" alt="Chicago skyline" />
+                <div class="memory-overlay">
+                    <h3>Chicago</h3>
+                    <p>Weekend trip to the Windy City.</p>
+                </div>
+            </article>
+
+            <article class="memory-card">
+                <img src="images/detroit.jpeg" alt="Detroit cityscape" />
+                <div class="memory-overlay">
+                    <h3>Detroit</h3>
+                    <p>Discovering the Motor City.</p>
+                </div>
+            </article>
+
+            <article class="memory-card">
+                <img src="images/frat.jpeg" alt="Friends and social events" />
+                <div class="memory-overlay">
+                    <h3>New Friends</h3>
+                    <p>People who turned a semester into a home.</p>
+                </div>
+            </article>
+
+            <article class="memory-card">
+                <img src="images/sf.jpeg" alt="San Francisco" />
+                <div class="memory-overlay">
+                    <h3>San Francisco</h3>
+                    <p>Traveling to the Bay Area.</p>
+                </div>
+            </article>
+
+            <article class="memory-card">
+                <img src="images/ycombinator.jpeg" alt="Y Combinator" />
+                <div class="memory-overlay">
+                    <h3>Y Combinator</h3>
+                    <p>Hackathon at Y Combinator during SF Tech Week.</p>
+                </div>
+            </article>
+        </div>
+
+        <div class="section-cta">
+            <a href="gallery.html" class="btn btn-outline">View Full Gallery</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>SI338 Individual Project - @ 2025 Alberto Puliga</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
