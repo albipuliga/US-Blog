@@ -591,6 +591,16 @@ ol {
     box-shadow: var(--shadow-xl);
 }
 
+.featured-card:focus {
+    outline: none;
+}
+
+.featured-card:focus-visible {
+    outline: 2px solid var(--color-maize);
+    outline-offset: 4px;
+    box-shadow: var(--shadow-xl), var(--focus-ring);
+}
+
 .card-image {
     position: relative;
     aspect-ratio: 4 / 3;
