@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Photo gallery showcasing memories from my study abroad semester at the University of Michigan.">
+    <title>Gallery | From Italy to Michigan</title>
+    <link rel="icon" type="image/jpeg" href="images/umlogo.jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Skip Navigation Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header class="site-header" role="banner">
+        <div class="header-content">
+            <a href="index.html" class="logo" aria-label="Home - From Italy to Michigan">
+                <span class="logo-icon" aria-hidden="true">✦</span>
+                <span class="logo-text">Italia → Michigan</span>
+            </a>
+
+            <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav"
+                aria-label="Toggle navigation menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+
+            <nav id="main-nav" class="main-nav" role="navigation" aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="gallery.html" class="nav-link active" aria-current="page">Gallery</a></li>
+                    <li><a href="timeline.html" class="nav-link">Timeline</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero" aria-labelledby="page-title">
+        <div class="page-hero-content">
+            <h1 id="page-title" class="page-title">Memory Gallery</h1>
+            <p class="page-subtitle">110+ moments captured throughout my Michigan adventure</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Filter Controls -->
+        <section class="filter-section" aria-labelledby="filter-title">
+            <h2 id="filter-title" class="visually-hidden">Filter Gallery</h2>
+
+            <!-- Search -->
+            <div class="search-container">
+                <label for="gallery-search" class="visually-hidden">Search memories</label>
+                <input type="search" id="gallery-search" class="search-input" placeholder="Search memories..."
+                    aria-describedby="search-hint">
+                <span id="search-hint" class="visually-hidden">Type to filter photos by title or description</span>
+                <span class="search-icon" aria-hidden="true">🔍</span>
+            </div>
+
+            <!-- Category Filters -->
+            <div class="filter-controls" role="group" aria-label="Filter by category">
+                <button class="filter-btn active" data-filter="all" aria-pressed="true">
+                    All
+                    <span class="filter-count">(110)</span>
+                </button>
+                <button class="filter-btn" data-filter="campus" aria-pressed="false">
+                    Campus Life
+                    <span class="filter-count">(42)</span>
+                </button>
+                <button class="filter-btn" data-filter="travel" aria-pressed="false">
+                    Travel
+                    <span class="filter-count">(38)</span>
+                </button>
+                <button class="filter-btn" data-filter="food" aria-pressed="false">
+                    Food
+                    <span class="filter-count">(28)</span>
+                </button>
+                <button class="filter-btn" data-filter="friends" aria-pressed="false">
+                    Friends
+                    <span class="filter-count">(35)</span>
+                </button>
+            </div>
+
+            <!-- Results Count -->
+            <div class="results-info" role="status" aria-live="polite">
+                <span id="results-count">Showing 150 memories</span>
+            </div>
+        </section>
+
+        <!-- Gallery Grid -->
+        <section class="gallery-section" aria-labelledby="gallery-grid-title">
+            <h2 id="gallery-grid-title" class="visually-hidden">Photo Gallery</h2>
+
+            <div class="gallery-grid" id="gallery-grid">
+                <!-- Campus Life Photos -->
+                <article class="gallery-item" data-category="campus" data-title="Michigan Stadium Game Day"
+                    data-size="large">
+                    <button class="gallery-button"
+                        aria-label="View larger: Michigan Stadium on game day with over 110,000 fans in maize and blue">
+                        <img src="images/campus.jpeg"
+                            alt="Michigan Stadium on game day with over 110,000 fans wearing maize and blue, autumn leaves visible in the background"
+                            loading="lazy" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <span class="gallery-category">Campus Life</span>
+                            <h3 class="gallery-title">The Big House</h3>
+                            <span class="gallery-date">September 2024</span>
+                        </div>
+                    </button>
+                </article>
+
+                <article class="gallery-item" data-category="friends" data-title="Study Group at Espresso Royale">
+                    <button class="gallery-button"
+                        aria-label="View larger: Friends studying together at Espresso Royale coffee shop">
+                        <img src="images/frat.jpeg"
+                            alt="A group of international students laughing and studying together at Espresso Royale coffee shop in Ann Arbor"
+                            loading="lazy" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <span class="gallery-category">Friends</span>
+                            <h3 class="gallery-title">Study Sessions</h3>
+                            <span class="gallery-date">November 2024</span>
+                        </div>
+                    </button>
+                </article>
+
+                <article class="gallery-item" data-category="travel" data-title="Chicago Skyline at Sunset"
+                    data-size="tall">
+                    <button class="gallery-button"
+                        aria-label="View larger: Chicago skyline at sunset from Lake Michigan">
+                        <img src="images/chicago.jpeg"
+                            alt="The Chicago skyline at sunset with the Willis Tower and John Hancock Center silhouetted against an orange and purple sky"
+                            loading="lazy" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <span class="gallery-category">Travel</span>
+                            <h3 class="gallery-title">Chicago Weekend</h3>
+                            <span class="gallery-date">October 2024</span>
+                        </div>
+                    </button>
+                </article>
+
+                <article class="gallery-item" data-category="food" data-title="First Deep Dish Pizza">
+                    <button class="gallery-button" aria-label="View larger: Chicago-style deep dish pizza">
+                        <img src="images/detroit.jpeg"
+                            alt="A steaming Chicago-style deep dish pizza with thick cheese and tomato sauce, just served at Lou Malnati's"
+                            loading="lazy" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <span class="gallery-category">Food</span>
+                            <h3 class="gallery-title">Deep Dish Discovery</h3>
+                            <span class="gallery-date">October 2024</span>
+                        </div>
+                    </button>
+                </article>
+
+                <article class="gallery-item" data-category="campus" data-title="Law Library Reading Room">
+                    <button class="gallery-button"
+                        aria-label="View larger: The stunning reading room in Michigan Law Library">
+                        <img src="images/umlogo.jpeg"
+                            alt="The ornate reading room of the University of Michigan Law Library with gothic arched windows and wooden study tables"
+                            loading="lazy" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <span class="gallery-category">Campus Life</span>
+                            <h3 class="gallery-title">Law Library Magic</h3>
+                            <span class="gallery-date">September 2024</span>
+                        </div>
+                    </button>
+                </article>
+
+                <article class="gallery-item" data-category="food" data-title="Zingerman's Deli Experience">
+                    <button class="gallery-button" aria-label="View larger: Famous Reuben sandwich at Zingerman's Deli">
+                        <img src="images/detroit.jpeg"
+                            alt="A massive Reuben sandwich stacked high with corned beef at the famous Zingerman's Deli"
+                            loading="lazy" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <span class="gallery-category">Food</span>
+                            <h3 class="gallery-title">Zingerman's Magic</h3>
+                            <span class="gallery-date">September 2024</span>
+                        </div>
+                    </button>
+                </article>
+
+                <article class="gallery-item" data-category="friends" data-title="International Student Potluck">
+                    <button class="gallery-button"
+                        aria-label="View larger: International students sharing food from their home countries">
+                        <img src="images/frat.jpeg"
+                            alt="A table filled with dishes from around the world at an international student potluck dinner"
+                            loading="lazy" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <span class="gallery-category">Friends</span>
+                            <h3 class="gallery-title">Flavors of Home</h3>
+                            <span class="gallery-date">November 2024</span>
+                        </div>
+                    </button>
+                </article>
+
+                <article class="gallery-item" data-category="travel" data-title="Detroit Institute of Arts">
+                    <button class="gallery-button"
+                        aria-label="View larger: Diego Rivera murals at the Detroit Institute of Arts">
+                        <img src="images/detroit.jpeg"
+                            alt="The famous Diego Rivera Detroit Industry Murals at the Detroit Institute of Arts"
+                            loading="lazy" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <span class="gallery-category">Travel</span>
+                            <h3 class="gallery-title">DIA Discovery</h3>
+                            <span class="gallery-date">October 2024</span>
+                        </div>
+                    </button>
+                </article>
+
+                <article class="gallery-item" data-category="campus" data-title="Burton Tower at Night">
+                    <button class="gallery-button" aria-label="View larger: Burton Memorial Tower illuminated at night">
+                        <img src="images/campus.jpeg"
+                            alt="Burton Memorial Tower lit up against a dark blue night sky, with the carillon bells visible"
+                            loading="lazy" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <span class="gallery-category">Campus Life</span>
+                            <h3 class="gallery-title">Burton Tower</h3>
+                            <span class="gallery-date">November 2024</span>
+                        </div>
+                    </button>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="footer-content">
+            <p class="copyright">SI338 Individual Project - @ 2025 Alberto Puliga</p>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lightbox-title" hidden>
+        <div class="lightbox-overlay" aria-hidden="true"></div>
+        <div class="lightbox-content">
+            <button class="lightbox-close" aria-label="Close lightbox">
+                <span aria-hidden="true">×</span>
+            </button>
+            <figure class="lightbox-figure">
+                <img src="" alt="" id="lightbox-image" class="lightbox-image">
+                <figcaption id="lightbox-title" class="lightbox-caption"></figcaption>
+            </figure>
+            <div class="lightbox-nav">
+                <button class="lightbox-prev" aria-label="Previous image">
+                    <span aria-hidden="true">←</span>
+                </button>
+                <button class="lightbox-next" aria-label="Next image">
+                    <span aria-hidden="true">→</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
