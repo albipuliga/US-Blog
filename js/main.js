@@ -192,10 +192,12 @@ const galleryButtons = document.querySelectorAll('.gallery-button');
 
 let currentImageIndex = 0;
 let galleryImages = [];
+let isFeaturedCardLightbox = false;
 
-function openLightbox(index) {
+function openLightbox(index, showNavigation = true) {
     if (!lightbox) return;
 
+    isFeaturedCardLightbox = !showNavigation;
     currentImageIndex = index;
     const imageData = galleryImages[index];
 
@@ -205,6 +207,12 @@ function openLightbox(index) {
 
     lightbox.hidden = false;
     document.body.style.overflow = 'hidden';
+
+    // Show/hide navigation arrows
+    const lightboxNav = document.querySelector('.lightbox-nav');
+    if (lightboxNav) {
+        lightboxNav.style.display = showNavigation ? 'flex' : 'none';
+    }
 
     // Focus management
     lightboxClose.focus();
@@ -218,6 +226,13 @@ function closeLightbox() {
 
     lightbox.hidden = true;
     document.body.style.overflow = '';
+    isFeaturedCardLightbox = false;
+
+    // Show navigation arrows again (for next time)
+    const lightboxNav = document.querySelector('.lightbox-nav');
+    if (lightboxNav) {
+        lightboxNav.style.display = '';
+    }
 
     // Return focus to the gallery item that opened the lightbox
     if (galleryButtons[currentImageIndex]) {
@@ -277,10 +292,14 @@ document.addEventListener('keydown', (e) => {
             closeLightbox();
             break;
         case 'ArrowLeft':
-            showPrevImage();
+            if (!isFeaturedCardLightbox) {
+                showPrevImage();
+            }
             break;
         case 'ArrowRight':
-            showNextImage();
+            if (!isFeaturedCardLightbox) {
+                showNextImage();
+            }
             break;
     }
 });
@@ -344,6 +363,45 @@ if (progressBar) {
         progressBar.style.width = `${Math.min(progress, 100)}%`;
     });
 }
+
+// =====================================================
+// FEATURED CARDS LIGHTBOX
+// =====================================================
+
+const featuredCards = document.querySelectorAll('.featured-card');
+
+featuredCards.forEach(card => {
+    card.addEventListener('click', () => {
+        const img = card.querySelector('.card-image img');
+        const title = card.querySelector('.card-title')?.textContent || '';
+
+        if (img && lightbox) {
+            isFeaturedCardLightbox = true;
+            lightboxImage.src = img.src;
+            lightboxImage.alt = img.alt;
+            lightboxCaption.textContent = title;
+
+            // Hide navigation arrows for featured cards
+            const lightboxNav = document.querySelector('.lightbox-nav');
+            if (lightboxNav) {
+                lightboxNav.style.display = 'none';
+            }
+
+            lightbox.hidden = false;
+            document.body.style.overflow = 'hidden';
+            lightboxClose.focus();
+            lightbox.setAttribute('aria-label', `Image: ${title}`);
+        }
+    });
+
+    // Allow Enter/Space key activation
+    card.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            card.click();
+        }
+    });
+});
 
 // =====================================================
 // RANDOM MEMORY BUTTON

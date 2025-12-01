@@ -584,6 +584,7 @@ ol {
     background: var(--color-white);
     box-shadow: var(--shadow-md);
     transition: transform var(--transition-base), box-shadow var(--transition-base);
+    cursor: pointer;
 }
 
 .featured-card:hover {
