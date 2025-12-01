@@ -1005,7 +1005,7 @@ ol {
 
 .month-subtitle {
     font-size: var(--text-sm);
-    color: var(--color-text-muted);
+    color: var(--color-navy);
     font-style: italic;
 }
 
@@ -1066,8 +1066,12 @@ ol {
     display: inline-block;
     font-size: var(--text-sm);
     font-weight: 600;
-    color: var(--color-terracotta);
+    color: var(--color-navy);
     margin-bottom: var(--space-2);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+    text-decoration-color: var(--color-terracotta);
 }
 
 .timeline-title {
