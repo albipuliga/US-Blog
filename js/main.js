@@ -352,6 +352,7 @@ if (animatedElements.length > 0 && !prefersReducedMotion()) {
 // =====================================================
 
 const progressBar = document.querySelector('.progress-bar');
+const timelineItems = document.querySelectorAll('.timeline-item');
 
 if (progressBar) {
     window.addEventListener('scroll', () => {
@@ -361,6 +362,13 @@ if (progressBar) {
 
         const progress = (scrollTop / (documentHeight - windowHeight)) * 100;
         progressBar.style.width = `${Math.min(progress, 100)}%`;
+    });
+}
+
+// Make timeline items keyboard-focusable
+if (timelineItems.length > 0) {
+    timelineItems.forEach(item => {
+        item.setAttribute('tabindex', '0');
     });
 }
 

@@ -1028,6 +1028,20 @@ ol {
     transition: opacity var(--transition-slow), transform var(--transition-slow);
 }
 
+.timeline-item:focus {
+    outline: none;
+}
+
+.timeline-item:focus-visible {
+    outline: none;
+}
+
+.timeline-item:focus-visible .timeline-content {
+    outline: 2px solid var(--color-maize);
+    outline-offset: 4px;
+    box-shadow: var(--shadow-xl), var(--focus-ring);
+}
+
 .timeline-item[data-animate]:not(.is-visible) {
     opacity: 0;
     transform: translateY(30px);
