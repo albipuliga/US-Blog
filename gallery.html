@@ -49,7 +49,7 @@
     <section class="page-hero" aria-labelledby="page-title">
         <div class="page-hero-content">
             <h1 id="page-title" class="page-title">Memory Gallery</h1>
-            <p class="page-subtitle">110+ moments captured throughout my Michigan adventure</p>
+            <p class="page-subtitle">The best memories throughout my Michigan adventure</p>
         </div>
     </section>
 
@@ -72,29 +72,19 @@
             <div class="filter-controls" role="group" aria-label="Filter by category">
                 <button class="filter-btn active" data-filter="all" aria-pressed="true">
                     All
-                    <span class="filter-count">(110)</span>
                 </button>
                 <button class="filter-btn" data-filter="campus" aria-pressed="false">
                     Campus Life
-                    <span class="filter-count">(42)</span>
                 </button>
                 <button class="filter-btn" data-filter="travel" aria-pressed="false">
                     Travel
-                    <span class="filter-count">(38)</span>
                 </button>
                 <button class="filter-btn" data-filter="food" aria-pressed="false">
                     Food
-                    <span class="filter-count">(28)</span>
                 </button>
                 <button class="filter-btn" data-filter="friends" aria-pressed="false">
                     Friends
-                    <span class="filter-count">(35)</span>
                 </button>
-            </div>
-
-            <!-- Results Count -->
-            <div class="results-info" role="status" aria-live="polite">
-                <span id="results-count">Showing 150 memories</span>
             </div>
         </section>
 
@@ -103,128 +93,103 @@
             <h2 id="gallery-grid-title" class="visually-hidden">Photo Gallery</h2>
 
             <div class="gallery-grid" id="gallery-grid">
-                <!-- Campus Life Photos -->
-                <article class="gallery-item" data-category="campus" data-title="Michigan Stadium Game Day"
-                    data-size="large">
+                <article class="gallery-item" data-category="campus" data-title="The Big House" data-size="large">
                     <button class="gallery-button"
-                        aria-label="View larger: Michigan Stadium on game day with over 110,000 fans in maize and blue">
-                        <img src="images/campus.jpeg"
-                            alt="Michigan Stadium on game day with over 110,000 fans wearing maize and blue, autumn leaves visible in the background"
-                            loading="lazy" class="gallery-image">
+                        aria-label="View larger: The Big House on game day with over 110,000 fans in maize and blue">
+                        <img src="images/bighouse.jpeg"
+                            alt="The Big House on game day with over 110,000 fans wearing maize and blue" loading="lazy"
+                            class="gallery-image">
                         <div class="gallery-overlay">
                             <span class="gallery-category">Campus Life</span>
                             <h3 class="gallery-title">The Big House</h3>
-                            <span class="gallery-date">September 2024</span>
+                            <span class="gallery-date">September 2025</span>
                         </div>
                     </button>
                 </article>
 
-                <article class="gallery-item" data-category="friends" data-title="Study Group at Espresso Royale">
-                    <button class="gallery-button"
-                        aria-label="View larger: Friends studying together at Espresso Royale coffee shop">
+                <article class="gallery-item" data-category="friends" data-title="First American Party">
+                    <button class="gallery-button" aria-label="View larger: First American party with friends">
                         <img src="images/frat.jpeg"
-                            alt="A group of international students laughing and studying together at Espresso Royale coffee shop in Ann Arbor"
-                            loading="lazy" class="gallery-image">
+                            alt="Multiple people gathered outside a house with a party going on at night" loading="lazy"
+                            class="gallery-image">
                         <div class="gallery-overlay">
                             <span class="gallery-category">Friends</span>
-                            <h3 class="gallery-title">Study Sessions</h3>
-                            <span class="gallery-date">November 2024</span>
+                            <h3 class="gallery-title">First American Party</h3>
+                            <span class="gallery-date">August 2025</span>
                         </div>
                     </button>
                 </article>
 
-                <article class="gallery-item" data-category="travel" data-title="Chicago Skyline at Sunset"
-                    data-size="tall">
-                    <button class="gallery-button"
-                        aria-label="View larger: Chicago skyline at sunset from Lake Michigan">
-                        <img src="images/chicago.jpeg"
-                            alt="The Chicago skyline at sunset with the Willis Tower and John Hancock Center silhouetted against an orange and purple sky"
-                            loading="lazy" class="gallery-image">
+                <article class="gallery-item" data-category="travel" data-title="Exploring Detroit">
+                    <button class="gallery-button" aria-label="View larger: Exploring Detroit">
+                        <img src="images/detroit.jpeg" alt="The iconic Monument to Joe Louis in Detroit" loading="lazy"
+                            class="gallery-image">
                         <div class="gallery-overlay">
                             <span class="gallery-category">Travel</span>
-                            <h3 class="gallery-title">Chicago Weekend</h3>
-                            <span class="gallery-date">October 2024</span>
+                            <h3 class="gallery-title">Exploring Detroit</h3>
+                            <span class="gallery-date">September 2025</span>
                         </div>
                     </button>
                 </article>
 
-                <article class="gallery-item" data-category="food" data-title="First Deep Dish Pizza">
-                    <button class="gallery-button" aria-label="View larger: Chicago-style deep dish pizza">
-                        <img src="images/detroit.jpeg"
-                            alt="A steaming Chicago-style deep dish pizza with thick cheese and tomato sauce, just served at Lou Malnati's"
-                            loading="lazy" class="gallery-image">
-                        <div class="gallery-overlay">
-                            <span class="gallery-category">Food</span>
-                            <h3 class="gallery-title">Deep Dish Discovery</h3>
-                            <span class="gallery-date">October 2024</span>
-                        </div>
-                    </button>
-                </article>
-
-                <article class="gallery-item" data-category="campus" data-title="Law Library Reading Room">
+                <article class="gallery-item" data-category="campus" data-title="U of M Campus">
                     <button class="gallery-button"
-                        aria-label="View larger: The stunning reading room in Michigan Law Library">
-                        <img src="images/umlogo.jpeg"
-                            alt="The ornate reading room of the University of Michigan Law Library with gothic arched windows and wooden study tables"
-                            loading="lazy" class="gallery-image">
-                        <div class="gallery-overlay">
-                            <span class="gallery-category">Campus Life</span>
-                            <h3 class="gallery-title">Law Library Magic</h3>
-                            <span class="gallery-date">September 2024</span>
-                        </div>
-                    </button>
-                </article>
-
-                <article class="gallery-item" data-category="food" data-title="Zingerman's Deli Experience">
-                    <button class="gallery-button" aria-label="View larger: Famous Reuben sandwich at Zingerman's Deli">
-                        <img src="images/detroit.jpeg"
-                            alt="A massive Reuben sandwich stacked high with corned beef at the famous Zingerman's Deli"
-                            loading="lazy" class="gallery-image">
-                        <div class="gallery-overlay">
-                            <span class="gallery-category">Food</span>
-                            <h3 class="gallery-title">Zingerman's Magic</h3>
-                            <span class="gallery-date">September 2024</span>
-                        </div>
-                    </button>
-                </article>
-
-                <article class="gallery-item" data-category="friends" data-title="International Student Potluck">
-                    <button class="gallery-button"
-                        aria-label="View larger: International students sharing food from their home countries">
-                        <img src="images/frat.jpeg"
-                            alt="A table filled with dishes from around the world at an international student potluck dinner"
-                            loading="lazy" class="gallery-image">
-                        <div class="gallery-overlay">
-                            <span class="gallery-category">Friends</span>
-                            <h3 class="gallery-title">Flavors of Home</h3>
-                            <span class="gallery-date">November 2024</span>
-                        </div>
-                    </button>
-                </article>
-
-                <article class="gallery-item" data-category="travel" data-title="Detroit Institute of Arts">
-                    <button class="gallery-button"
-                        aria-label="View larger: Diego Rivera murals at the Detroit Institute of Arts">
-                        <img src="images/detroit.jpeg"
-                            alt="The famous Diego Rivera Detroit Industry Murals at the Detroit Institute of Arts"
-                            loading="lazy" class="gallery-image">
-                        <div class="gallery-overlay">
-                            <span class="gallery-category">Travel</span>
-                            <h3 class="gallery-title">DIA Discovery</h3>
-                            <span class="gallery-date">October 2024</span>
-                        </div>
-                    </button>
-                </article>
-
-                <article class="gallery-item" data-category="campus" data-title="Burton Tower at Night">
-                    <button class="gallery-button" aria-label="View larger: Burton Memorial Tower illuminated at night">
+                        aria-label="View larger: The University of Michigan campus">
                         <img src="images/campus.jpeg"
-                            alt="Burton Memorial Tower lit up against a dark blue night sky, with the carillon bells visible"
+                            alt="The University of Michigan campus with students sitting on the grass in front of the Michigan Law Library"
                             loading="lazy" class="gallery-image">
                         <div class="gallery-overlay">
                             <span class="gallery-category">Campus Life</span>
-                            <h3 class="gallery-title">Burton Tower</h3>
-                            <span class="gallery-date">November 2024</span>
+                            <h3 class="gallery-title">U of M Campus</h3>
+                            <span class="gallery-date">September 2025</span>
+                        </div>
+                    </button>
+                </article>
+
+                <article class="gallery-item" data-category="food" data-title="Waffle at Sava's">
+                    <button class="gallery-button" aria-label="View larger: Waffle at Sava's">
+                        <img src="images/waffle.jpeg" alt="A waffle with strawberries and whipped cream"
+                            loading="lazy" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <span class="gallery-category">Food</span>
+                            <h3 class="gallery-title">Waffle at Sava's</h3>
+                            <span class="gallery-date">September 2025</span>
+                        </div>
+                    </button>
+                </article>
+
+                <article class="gallery-item" data-category="travel" data-title="Weekend in Chicago">
+                    <button class="gallery-button" aria-label="View larger: Weekend trip to Chicago skyline and river">
+                        <img src="images/chicago.jpeg" alt="View of Chicago skyscrapers along the river on a sunny day"
+                            loading="lazy" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <span class="gallery-category">Travel</span>
+                            <h3 class="gallery-title">Weekend in Chicago</h3>
+                            <span class="gallery-date">October 2025</span>
+                        </div>
+                    </button>
+                </article>
+
+                <article class="gallery-item" data-category="travel" data-title="San Francisco Trip">
+                    <button class="gallery-button" aria-label="View larger: San Francisco's Transamerica Pyramid at sunset">
+                        <img src="images/sf.jpeg" alt="San Francisco's Transamerica Pyramid at sunset"
+                            loading="lazy" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <span class="gallery-category">Travel</span>
+                            <h3 class="gallery-title">San Francisco Trip</h3>
+                            <span class="gallery-date">November 2025</span>
+                        </div>
+                    </button>
+                </article>
+
+                <article class="gallery-item" data-category="friends" data-title="Y Combinator Visit">
+                    <button class="gallery-button" aria-label="View larger: Visit to Y Combinator">
+                        <img src="images/ycombinator.jpeg" alt="Two people standing in front of the Y Combinator sign"
+                            loading="lazy" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <span class="gallery-category">Friends</span>
+                            <h3 class="gallery-title">Y Combinator Visit</h3>
+                            <span class="gallery-date">November 2025</span>
                         </div>
                     </button>
                 </article>
